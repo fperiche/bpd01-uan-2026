@@ -1,0 +1,1360 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BPD UAN 2026 | Aprendizaje basado en proyectos e IA generativa</title>
+  <meta name="description" content="Micrositio institucional de la Buena Práctica Docente UAN 2026: aprendizaje basado en proyectos e IA generativa para diagnóstico, simulación y modernización de un banco didáctico electroneumático." />
+  <style>
+    :root{
+      --navy:#061f49;
+      --navy-2:#082b63;
+      --navy-3:#0b397d;
+      --green:#168d26;
+      --green-2:#28b73f;
+      --cyan:#69b8ff;
+      --ink:#071f51;
+      --muted:#53637d;
+      --line:#dce5f3;
+      --soft:#f6f9fd;
+      --soft-2:#edf4fc;
+      --white:#ffffff;
+      --shadow:0 18px 48px rgba(6,31,73,.16);
+      --shadow-soft:0 8px 28px rgba(6,31,73,.10);
+      --radius:20px;
+      --radius-sm:13px;
+      --max:1450px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color:var(--ink);
+      background:#fff;
+      overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:var(--max);margin:auto;padding:0 34px}
+    .skip{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip:focus{left:16px;top:16px;width:auto;height:auto;padding:12px 16px;background:#fff;color:#061f49;z-index:1000;border-radius:10px}
+
+    /* Header */
+    .site-header{
+      position:sticky;top:0;z-index:50;
+      background:linear-gradient(90deg,#061f49 0%,#06285f 58%,#08224f 100%);
+      color:white;
+      box-shadow:0 6px 22px rgba(0,0,0,.18);
+    }
+    .nav-wrap{
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:22px;
+    }
+    .brand{
+      display:flex;align-items:center;gap:14px;min-width:280px;
+    }
+    .brand-mark{
+      font-weight:950;
+      letter-spacing:-.09em;
+      font-size:42px;
+      line-height:1;
+    }
+    .brand-copy{
+      padding-left:13px;
+      border-left:1px solid rgba(255,255,255,.34);
+      line-height:1.05;
+      font-weight:850;
+      font-size:13px;
+      text-transform:uppercase;
+      letter-spacing:.04em;
+    }
+    .anniversary{
+      font-size:25px;
+      font-weight:300;
+      line-height:.9;
+      padding-left:12px;
+      border-left:1px solid rgba(255,255,255,.28);
+    }
+    .anniversary small{font-size:10px;display:block;letter-spacing:.1em;text-transform:uppercase;margin-top:3px}
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:22px;
+      flex:1;
+      font-size:14px;
+      font-weight:750;
+      white-space:nowrap;
+    }
+    .nav a{
+      position:relative;
+      padding:28px 0 24px;
+      opacity:.95;
+    }
+    .nav a.active::after,.nav a:hover::after{
+      content:"";
+      position:absolute;
+      left:0;right:0;bottom:14px;
+      height:4px;
+      border-radius:999px;
+      background:var(--green-2);
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      border:0;
+      cursor:pointer;
+      font-weight:850;
+      border-radius:10px;
+      padding:13px 17px;
+      color:#fff;
+      background:linear-gradient(135deg,#138a26,#28b63b);
+      box-shadow:0 10px 22px rgba(22,141,38,.25);
+      transition:.18s transform ease, .18s box-shadow ease, .18s filter ease;
+      white-space:nowrap;
+    }
+    .btn:hover{transform:translateY(-1px);filter:saturate(1.1);box-shadow:0 14px 28px rgba(22,141,38,.32)}
+    .btn.secondary{background:#fff;color:var(--navy);box-shadow:0 10px 22px rgba(6,31,73,.12);border:1px solid var(--line)}
+    .btn.ghost{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.28);box-shadow:none}
+    .hamb{display:none;background:transparent;color:white;border:0;cursor:pointer;padding:12px}
+
+    /* Hero */
+    .hero{
+      position:relative;
+      overflow:hidden;
+      min-height:620px;
+      background:
+        radial-gradient(circle at 78% 22%,rgba(105,184,255,.28),transparent 27%),
+        linear-gradient(100deg,#fff 0%,#fff 42%,#ecf5ff 59%,#0a3677 100%);
+      border-bottom:1px solid var(--line);
+    }
+    .hero::after{
+      content:"";
+      position:absolute;right:-80px;top:0;bottom:0;width:54%;
+      background:
+        linear-gradient(90deg,rgba(255,255,255,.88),rgba(255,255,255,0) 28%),
+        radial-gradient(circle at 55% 46%,rgba(255,255,255,.26),transparent 23%),
+        linear-gradient(130deg,rgba(5,31,73,.08),rgba(5,31,73,.58));
+      pointer-events:none;
+    }
+    .hero-grid{
+      position:relative;z-index:2;
+      max-width:var(--max);
+      margin:auto;
+      padding:56px 34px 72px;
+      display:grid;
+      grid-template-columns:minmax(0,1.04fr) minmax(420px,.96fr);
+      gap:42px;
+      align-items:center;
+    }
+    .hero-copy{max-width:760px}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:10px;
+      border:1px solid rgba(22,141,38,.35);
+      color:var(--green);
+      background:rgba(22,141,38,.07);
+      border-radius:999px;
+      padding:8px 13px;
+      font-size:14px;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:.03em;
+    }
+    .hero h1{
+      margin:20px 0 13px;
+      font-size:clamp(38px,5vw,68px);
+      line-height:1.02;
+      letter-spacing:-.05em;
+      color:var(--navy);
+    }
+    .hero h1 strong{color:var(--green)}
+    .pill-title{
+      display:inline-flex;
+      background:linear-gradient(135deg,#061f49,#0a397c);
+      color:#fff;
+      font-size:clamp(16px,2vw,23px);
+      line-height:1.15;
+      font-weight:900;
+      padding:8px 15px;
+      border-radius:9px;
+      box-shadow:0 8px 20px rgba(6,31,73,.22);
+      margin-bottom:18px;
+    }
+    .lead{
+      color:#152b5a;
+      font-size:18px;
+      line-height:1.55;
+      max-width:750px;
+      margin:0 0 20px;
+    }
+    .meta-list{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:12px 18px;
+      margin-top:10px;
+    }
+    .meta-list span{
+      display:flex;gap:10px;align-items:flex-start;
+      color:#08245a;
+      font-size:14px;
+      line-height:1.35;
+      font-weight:650;
+    }
+    .meta-list svg{width:23px;height:23px;color:var(--green);flex:0 0 auto}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .hero-card{
+      position:relative;
+      z-index:2;
+      justify-self:end;
+      width:min(570px,100%);
+      border-radius:26px;
+      background:rgba(255,255,255,.87);
+      border:1px solid rgba(255,255,255,.75);
+      box-shadow:0 25px 60px rgba(0,0,0,.20);
+      overflow:hidden;
+      backdrop-filter:blur(8px);
+    }
+    .hero-card::before{
+      content:"";
+      position:absolute;inset:0;
+      border-radius:26px;
+      background:linear-gradient(135deg,rgba(40,183,63,.18),transparent 26%,rgba(6,31,73,.12));
+      pointer-events:none;
+    }
+    .hero-card img{width:100%;height:auto}
+    .hero-card .caption{
+      position:absolute;left:18px;right:18px;bottom:18px;
+      background:rgba(6,31,73,.92);
+      color:white;
+      border-left:5px solid var(--green-2);
+      border-radius:14px;
+      padding:13px 15px;
+      font-weight:800;
+      box-shadow:0 12px 30px rgba(0,0,0,.25);
+    }
+
+
+    .hero-card.hero-cover-clean{
+      border-radius:18px;
+      background:transparent;
+      border:0;
+      box-shadow:0 24px 58px rgba(6,31,73,.26);
+    }
+    .hero-card.hero-cover-clean::before{display:none}
+    .hero-card.hero-cover-clean img{
+      display:block;
+      width:100%;
+      aspect-ratio:16/9;
+      object-fit:cover;
+      object-position:center;
+    }
+
+    /* Metrics */
+    .metrics-shell{position:relative;margin-top:-44px;z-index:5}
+    .metrics{
+      max-width:1240px;margin:auto;
+      background:#fff;border:1px solid var(--line);border-radius:17px;
+      box-shadow:var(--shadow);
+      display:grid;grid-template-columns:repeat(5,1fr);
+      overflow:hidden;
+    }
+    .metric{
+      display:flex;align-items:center;gap:15px;
+      min-height:104px;
+      padding:18px 24px;
+      border-right:1px solid var(--line);
+    }
+    .metric:last-child{border-right:0}
+    .metric svg{width:42px;height:42px;color:var(--navy);flex:0 0 auto}
+    .metric.green svg,.metric.green strong{color:var(--green)}
+    .metric strong{display:block;font-size:29px;line-height:1;color:var(--navy)}
+    .metric span{display:block;color:#1a2b58;font-weight:700;margin-top:5px;font-size:14px}
+
+    /* Generic sections */
+    main{background:linear-gradient(180deg,#fff 0%,#fff 62%,#f7fbff 100%)}
+    .section{padding:72px 34px}
+    .section.compact{padding-top:34px;padding-bottom:34px}
+    .section-title{
+      display:flex;align-items:flex-end;justify-content:space-between;gap:24px;
+      margin-bottom:24px;
+    }
+    .section-title .kicker{
+      color:var(--green);font-weight:900;letter-spacing:.05em;text-transform:uppercase;font-size:13px;margin-bottom:8px;
+    }
+    .section-title h2{font-size:clamp(28px,3vw,42px);margin:0;color:var(--navy);letter-spacing:-.04em}
+    .section-title p{margin:0;color:var(--muted);max-width:720px;line-height:1.55;font-weight:550}
+    .panel{
+      background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+      box-shadow:var(--shadow-soft);padding:28px;
+    }
+    .split{display:grid;grid-template-columns:minmax(0,1fr) minmax(390px,.7fr);gap:24px;align-items:start}
+    .text-block p{font-size:16px;line-height:1.7;color:#223359;margin:0 0 16px}
+    .text-block p:last-child{margin-bottom:0}
+    .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+    .tag{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:999px;padding:8px 12px;background:var(--soft);font-weight:800;font-size:13px;color:var(--navy)}
+
+    /* Cards */
+    .process-grid{
+      display:grid;
+      grid-template-columns:repeat(7,minmax(145px,1fr));
+      gap:14px;
+    }
+    .card{
+      min-height:270px;
+      border:1px solid var(--line);
+      background:#fff;
+      border-radius:var(--radius-sm);
+      box-shadow:0 7px 20px rgba(6,31,73,.06);
+      padding:18px;
+      position:relative;
+      overflow:hidden;
+      transition:.2s transform ease,.2s box-shadow ease,.2s border-color ease;
+    }
+    .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-soft);border-color:#c9d8ed}
+    .card-number{
+      width:42px;height:42px;border-radius:999px;
+      background:var(--navy);
+      color:white;display:grid;place-items:center;
+      font-weight:950;font-size:18px;
+      box-shadow:0 8px 18px rgba(6,31,73,.20);
+      margin-bottom:12px;
+      position:relative;
+    }
+    .card-number::after{
+      content:"";
+      position:absolute;left:8px;right:8px;bottom:-8px;
+      height:4px;border-radius:999px;background:var(--green-2);
+    }
+    .card h3{font-size:17px;line-height:1.15;margin:0 0 10px;color:var(--navy)}
+    .card p{font-size:13px;color:#22345f;line-height:1.5;margin:0 0 14px}
+    .card .more{position:absolute;bottom:16px;left:18px;color:var(--navy);font-weight:900;font-size:13px}
+    .card .more:hover{color:var(--green)}
+
+    /* Mini visuals */
+    .mini-visual{
+      height:70px;border-radius:10px;margin:12px 0 13px;
+      border:1px solid #d6e1f0;
+      overflow:hidden;
+      background:#f6f9fd;
+      position:relative;
+    }
+    .mini-visual.bank{
+      background:
+        linear-gradient(90deg,#d3dae4 0 6px,transparent 6px 100%),
+        repeating-linear-gradient(0deg,#d8dde6 0 6px,#f2f4f7 6px 13px);
+    }
+    .mini-visual.bank::before{
+      content:"";position:absolute;left:16px;top:14px;width:54px;height:35px;background:#253b51;border-radius:4px;box-shadow:75px 10px 0 #c1c7ce,120px -2px 0 #dfe4e9;
+    }
+    .mini-visual.bank::after{
+      content:"";position:absolute;left:83px;top:23px;width:120px;height:28px;border:4px solid #0a74d1;border-left-color:transparent;border-radius:50%;
+    }
+    .mini-visual.diagram{
+      background:
+        radial-gradient(circle at 20% 30%,#06285f 0 6px,transparent 7px),
+        radial-gradient(circle at 50% 52%,#168d26 0 6px,transparent 7px),
+        radial-gradient(circle at 78% 26%,#06285f 0 6px,transparent 7px),
+        linear-gradient(45deg,transparent 49%,#adb9ca 50%,transparent 51%),
+        linear-gradient(-35deg,transparent 49%,#adb9ca 50%,transparent 51%),
+        #f9fbfe;
+    }
+    .mini-visual.ladder{
+      background:repeating-linear-gradient(0deg,#fff 0 15px,#eef3fa 16px 17px);
+    }
+    .mini-visual.ladder::before,.mini-visual.ladder::after{
+      content:"";position:absolute;top:9px;bottom:9px;width:3px;background:#0b2d66;
+    }
+    .mini-visual.ladder::before{left:18px}.mini-visual.ladder::after{right:18px}
+    .mini-visual.ladder span{display:none}
+    .mini-visual.ia{
+      background:radial-gradient(circle at center,rgba(40,183,63,.18),transparent 45%),#fbfdff;
+    }
+    .mini-visual.ia::before{
+      content:"";position:absolute;inset:13px 50px;border:3px solid #0c58ae;border-radius:50%;
+    }
+    .mini-visual.ia::after{
+      content:"";position:absolute;left:50%;top:50%;width:28px;height:28px;border-radius:999px;background:#168d26;transform:translate(-50%,-50%);box-shadow:0 -35px 0 -8px #0c58ae,0 35px 0 -8px #0c58ae,42px 0 0 -8px #0c58ae,-42px 0 0 -8px #0c58ae;
+    }
+    .mini-visual.chart{
+      background:linear-gradient(180deg,#fff,#f2f7fd);
+    }
+    .mini-visual.chart::before{
+      content:"";position:absolute;left:30px;bottom:13px;width:16px;height:32px;background:#9fb1c8;box-shadow:30px -12px 0 #168d26,60px -23px 0 #0b367a,90px -38px 0 #28b73f;border-radius:3px 3px 0 0;
+    }
+    .mini-visual.inst{
+      background:linear-gradient(180deg,#fff,#f2f7fd);
+    }
+    .mini-visual.inst::before{
+      content:"";position:absolute;left:50%;top:16px;transform:translateX(-50%);width:105px;height:43px;border-top:10px solid #0b367a;border-bottom:6px solid #0b367a;background:repeating-linear-gradient(90deg,transparent 0 12px,#0b367a 12px 16px,transparent 16px 28px);
+      clip-path:polygon(50% 0,100% 18%,100% 100%,0 100%,0 18%);
+    }
+
+    /* Method timeline */
+    .timeline{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:14px;
+      counter-reset:phase;
+    }
+    .phase{
+      counter-increment:phase;
+      padding:22px 18px 20px;
+      background:linear-gradient(180deg,#fff,#f7fbff);
+      border:1px solid var(--line);
+      border-radius:var(--radius-sm);
+      position:relative;
+      min-height:194px;
+      box-shadow:0 5px 18px rgba(6,31,73,.05);
+    }
+    .phase::before{
+      content:counter(phase);
+      width:36px;height:36px;border-radius:999px;
+      background:linear-gradient(135deg,var(--green),var(--green-2));
+      color:white;display:grid;place-items:center;
+      font-weight:950;margin-bottom:12px;
+    }
+    .phase h3{margin:0 0 8px;color:var(--navy);font-size:17px}
+    .phase p{margin:0;color:#2c3c61;line-height:1.55;font-size:14px}
+
+    /* Evaluation */
+    .eval-grid{display:grid;grid-template-columns:minmax(0,.86fr) minmax(430px,1.14fr);gap:24px}
+    .bars{display:grid;gap:16px}
+    .bar-row{display:grid;grid-template-columns:74px 1fr 58px;align-items:center;gap:14px;font-weight:850;color:var(--navy)}
+    .bar-track{height:18px;background:#e7eef8;border-radius:999px;overflow:hidden;box-shadow:inset 0 1px 3px rgba(6,31,73,.1)}
+    .bar-fill{height:100%;background:linear-gradient(90deg,#0b367a,#28b73f);border-radius:999px}
+    .team-table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border:1px solid var(--line);border-radius:15px;background:#fff}
+    .team-table th{background:#061f49;color:white;text-align:left;padding:13px;font-size:13px}
+    .team-table td{padding:13px;border-top:1px solid var(--line);vertical-align:top;font-size:13px;line-height:1.45;color:#26365d}
+    .team-table tr:nth-child(even) td{background:#f8fbff}
+    .score{font-size:18px;font-weight:950;color:var(--green);white-space:nowrap}
+    .badge{display:inline-block;background:rgba(40,183,63,.12);color:var(--green);font-weight:900;border-radius:999px;padding:4px 9px;margin-left:6px;font-size:11px}
+
+    /* Gallery */
+    .gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .figure-card{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:#fff;
+      box-shadow:var(--shadow-soft);
+      overflow:hidden;
+    }
+    .figure-card a{display:block}
+    .figure-card img{
+      width:100%;
+      height:440px;
+      object-fit:contain;
+      background:#f7fbff;
+      padding:18px;
+      cursor:zoom-in;
+    }
+    .figure-card figcaption{padding:18px 20px;border-top:1px solid var(--line)}
+    .figure-card figcaption strong{display:block;color:var(--navy);font-size:18px;margin-bottom:6px}
+    .figure-card figcaption span{color:var(--muted);font-size:14px;line-height:1.45;display:block}
+
+
+    /* Visual additions */
+    .hero-card.hero-slide a{display:block}
+    .hero-card.hero-slide img{aspect-ratio:16/9;object-fit:cover}
+    .visual-panel{padding:18px}
+    .media-photo{
+      display:block;
+      overflow:hidden;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background:var(--soft);
+      box-shadow:0 10px 28px rgba(6,31,73,.08);
+    }
+    .media-photo img{width:100%;aspect-ratio:3/2;object-fit:cover}
+    .method-layout{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(440px,.85fr);
+      gap:24px;
+      align-items:start;
+    }
+    .method-layout .timeline{grid-template-columns:1fr}
+    .method-figure img{height:auto;max-height:520px;object-fit:contain}
+    .gallery-large{
+      grid-template-columns:repeat(3,minmax(0,1fr));
+    }
+    .gallery-large .figure-card img{
+      height:250px;
+      object-fit:contain;
+      padding:12px;
+    }
+    .gallery-large .figure-card:first-child img,
+    .gallery-large .figure-card:nth-child(12) img{
+      object-fit:cover;
+    }
+    .gallery-large .figure-card figcaption{
+      min-height:104px;
+    }
+    .docente-band{
+      display:grid;
+      grid-template-columns:120px minmax(0,1fr) auto;
+      gap:22px;
+      align-items:center;
+      padding:24px;
+      border-radius:var(--radius);
+      background:
+        linear-gradient(135deg,#fff 0%,#f3f8ff 55%,#e9f4ff 100%);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow-soft);
+    }
+    .docente-band img{
+      width:120px;height:120px;
+      object-fit:cover;
+      object-position:50% 18%;
+      border-radius:999px;
+      border:5px solid #fff;
+      box-shadow:0 12px 30px rgba(6,31,73,.16);
+    }
+    .docente-band .kicker{
+      color:var(--green);font-weight:900;letter-spacing:.05em;text-transform:uppercase;font-size:13px;margin-bottom:6px;
+    }
+    .docente-band h2{margin:0 0 8px;color:var(--navy);letter-spacing:-.03em}
+    .docente-band p{margin:0;color:#334464;line-height:1.55;font-weight:550}
+
+    /* IA cards */
+    .ally-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .ally{
+      border:1px solid var(--line);
+      border-radius:var(--radius-sm);
+      background:#fff;
+      padding:22px 18px;
+      text-align:center;
+      min-height:190px;
+      box-shadow:0 5px 18px rgba(6,31,73,.05);
+    }
+    .ally svg{width:48px;height:48px;color:var(--green);margin:0 auto 12px}
+    .ally h3{margin:0 0 8px;color:var(--navy);font-size:17px}
+    .ally p{margin:0;color:#334464;font-size:14px;line-height:1.45}
+
+    /* Resources */
+    .resources{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+    }
+    .resource{
+      display:flex;flex-direction:column;gap:10px;
+      padding:22px;border-radius:var(--radius-sm);
+      border:1px solid var(--line);
+      background:#fff;
+      box-shadow:0 5px 18px rgba(6,31,73,.05);
+      min-height:170px;
+    }
+    .resource svg{width:34px;height:34px;color:var(--green)}
+    .resource h3{margin:0;color:var(--navy);font-size:18px}
+    .resource p{margin:0;color:#3b4968;font-size:14px;line-height:1.5;flex:1}
+    .resource a{font-weight:900;color:var(--green)}
+    .quote{
+      position:relative;
+      margin:0;
+      padding:34px 44px;
+      color:white;
+      border-radius:18px;
+      background:
+        radial-gradient(circle at 10% 0%,rgba(40,183,63,.18),transparent 27%),
+        linear-gradient(135deg,#061f49,#082d69);
+      border-left:7px solid var(--green-2);
+      box-shadow:var(--shadow);
+      font-size:clamp(22px,3vw,34px);
+      line-height:1.35;
+      font-weight:750;
+      text-align:center;
+    }
+    .quote strong{color:#7bf28b}
+    .quote::before,.quote::after{color:var(--green-2);font-size:80px;line-height:0;position:absolute;font-family:Georgia,serif}
+    .quote::before{content:"“";left:18px;top:40px}.quote::after{content:"”";right:22px;bottom:8px}
+
+    /* Footer */
+    footer{
+      background:linear-gradient(90deg,#061f49,#06285f 58%,#08224f);
+      color:#fff;
+      border-top:5px solid var(--green-2);
+      margin-top:38px;
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.2fr 1.1fr 1.3fr 1.2fr 1fr;
+      gap:25px;
+      padding-top:28px;
+      padding-bottom:28px;
+      align-items:start;
+    }
+    .footer-grid>div{border-left:1px solid rgba(255,255,255,.22);padding-left:24px;min-height:90px}
+    .footer-grid>div:first-child{border-left:0;padding-left:0}
+    .footer-brand{display:flex;align-items:center;gap:14px}
+    .footer-brand small{font-weight:800;letter-spacing:.06em;line-height:1.1}
+    footer h4{margin:0 0 8px;font-size:14px}
+    footer p{margin:0;color:rgba(255,255,255,.86);line-height:1.45;font-size:14px}
+    .social{display:flex;gap:12px}
+    .social a{width:30px;height:30px;border-radius:8px;background:white;color:var(--navy);display:grid;place-items:center;font-weight:950}
+
+    /* Modal */
+    .modal{position:fixed;inset:0;background:rgba(3,13,31,.78);display:none;align-items:center;justify-content:center;z-index:100;padding:22px}
+    .modal.open{display:flex}
+    .modal-card{background:#fff;border-radius:18px;max-width:930px;width:100%;box-shadow:0 30px 80px rgba(0,0,0,.35);overflow:hidden}
+    .modal-head{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:20px 22px;background:#061f49;color:white}
+    .modal-head h3{margin:0;font-size:22px}
+    .modal-close{border:0;border-radius:999px;width:38px;height:38px;cursor:pointer;font-size:24px;background:rgba(255,255,255,.12);color:white}
+    .modal-body{padding:24px;color:#23345f;line-height:1.7}
+    .modal-body img{max-height:80vh;object-fit:contain;margin:auto}
+    .modal-body p{margin-top:0}
+    .modal-body ul{margin-top:8px}
+    .source-note{font-size:12px;color:#66758d;margin-top:10px}
+
+    /* Mobile */
+    @media (max-width:1180px){
+      .nav{display:none;position:absolute;left:0;right:0;top:76px;background:#061f49;flex-direction:column;align-items:flex-start;padding:10px 34px 24px;gap:0}
+      .nav.open{display:flex}
+      .nav a{padding:14px 0}
+      .btn.top{display:none}
+      .hamb{display:block}
+      .hero-grid{grid-template-columns:1fr;padding-top:40px}
+      .hero-card{justify-self:start;max-width:820px}
+      .process-grid{grid-template-columns:repeat(3,1fr)}
+      .timeline{grid-template-columns:repeat(3,1fr)}
+      .eval-grid,.split,.method-layout{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:repeat(2,1fr)}
+      .footer-grid>div{border-left:0;padding-left:0}
+    }
+    @media (max-width:820px){
+      .container,.section{padding-left:18px;padding-right:18px}
+      .brand{min-width:auto}.anniversary{display:none}.brand-copy{font-size:12px}.brand-mark{font-size:34px}
+      .hero{min-height:0}
+      .hero-grid{padding-left:18px;padding-right:18px}
+      .hero h1{font-size:38px}
+      .meta-list{grid-template-columns:1fr}
+      .metrics-shell{margin:18px 18px 0}
+      .metrics{grid-template-columns:1fr 1fr}
+      .metric{min-height:86px;border-bottom:1px solid var(--line)}
+      .metric:nth-child(even){border-right:0}
+      .metric:last-child{grid-column:1/-1;border-bottom:0}
+      .section-title{display:block}.section-title p{margin-top:10px}
+      .process-grid,.timeline,.ally-grid,.resources,.gallery-grid,.gallery-large{grid-template-columns:1fr}
+      .card{min-height:auto;padding-bottom:54px}
+      .figure-card img{height:auto;max-height:520px}
+      .quote{font-size:22px;padding:28px 22px}
+      .footer-grid{grid-template-columns:1fr}
+      .team-table{font-size:12px}
+      .team-table th:nth-child(3),.team-table td:nth-child(3){display:none}
+      .docente-band{grid-template-columns:1fr;text-align:center}.docente-band img{margin:auto}.docente-band .btn{justify-self:center}
+    }
+  
+    /* Ajustes visuales solicitados: secciones más limpias y legibles */
+    #proyecto .section-title{margin-bottom:22px}
+    .project-split{
+      grid-template-columns:minmax(520px,.96fr) minmax(480px,.84fr);
+      gap:28px;
+      align-items:start;
+    }
+    .project-visual{
+      padding:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .project-photo{
+      width:100%;
+      border-radius:18px;
+      background:#fff;
+    }
+    .project-photo img{
+      aspect-ratio:16/10.6;
+      object-fit:contain;
+      background:#fff;
+      padding:0;
+    }
+    .project-copy{
+      display:grid;
+      gap:18px;
+    }
+    .objective-panel{
+      padding:26px 28px;
+      background:linear-gradient(135deg,#fff 0%,#f8fbff 100%);
+    }
+    .objective-panel .kicker{
+      color:var(--green);
+      font-weight:900;
+      letter-spacing:.05em;
+      text-transform:uppercase;
+      font-size:13px;
+      margin-bottom:8px;
+    }
+    .objective-panel h3{
+      margin:0 0 12px;
+      color:var(--navy);
+      font-size:clamp(24px,2.1vw,32px);
+      line-height:1.08;
+      letter-spacing:-.035em;
+    }
+    .objective-panel p{
+      margin:0;
+      color:#34445f;
+      line-height:1.62;
+      font-weight:550;
+    }
+
+    #metodologia .section-title{
+      align-items:flex-start;
+      margin-bottom:22px;
+    }
+    #metodologia .section-title p{max-width:650px}
+    #metodologia .method-layout{
+      grid-template-columns:minmax(360px,.66fr) minmax(650px,1.08fr);
+      gap:34px;
+      align-items:start;
+    }
+    #metodologia .timeline{
+      align-self:start;
+    }
+    #metodologia .phase{
+      padding:16px 18px 16px 58px;
+      min-height:auto;
+    }
+    #metodologia .phase h3{font-size:17px}
+    #metodologia .phase p{font-size:14px;line-height:1.5}
+    #metodologia .method-figure{
+      align-self:start;
+    }
+    #metodologia .method-figure img{
+      width:100%;
+      height:auto;
+      max-height:none;
+      object-fit:contain;
+      padding:18px;
+      background:#fff;
+    }
+    #metodologia .method-figure figcaption{
+      padding:22px 24px;
+    }
+    #metodologia .method-figure figcaption strong{
+      font-size:23px;
+    }
+
+    #resultados .eval-grid{
+      grid-template-columns:minmax(360px,.62fr) minmax(700px,1.38fr);
+      gap:28px;
+      align-items:start;
+    }
+    #resultados .panel{align-self:start}
+    #resultados .team-table th{
+      padding:15px 16px;
+      font-size:14px;
+    }
+    #resultados .team-table td{
+      padding:16px;
+      font-size:14px;
+      line-height:1.5;
+      color:#23365a;
+    }
+    #resultados .score{
+      font-size:20px;
+    }
+    #resultados .bars{gap:18px}
+    #resultados .bar-row{font-size:16px}
+
+    #ia .section-title{
+      display:block;
+      max-width:900px;
+      margin-bottom:28px;
+    }
+    #ia .section-title h2{
+      margin-bottom:12px;
+    }
+    #ia .section-title p{
+      max-width:820px;
+    }
+    #ia .ally-grid{
+      margin-top:0;
+    }
+
+    @media (max-width:1180px){
+      .project-split,
+      #metodologia .method-layout,
+      #resultados .eval-grid{
+        grid-template-columns:1fr;
+      }
+      .project-photo img{aspect-ratio:16/9}
+      #metodologia .method-figure img{padding:12px}
+    }
+
+  </style>
+  <!-- Ajuste hero solicitado: texto introductorio eliminado, datos desplazados arriba e imagen de bienvenida limpia. -->
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="#inicio" class="brand" aria-label="Inicio">
+      <div class="brand-mark">UAN</div>
+      <div class="brand-copy">Universidad<br>Antonio Nariño</div>
+      <div class="anniversary">50 <small>años</small></div>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navegación principal">
+      <a class="active" href="#inicio">Inicio</a>
+      <a href="#proyecto">Proyecto</a>
+      <a href="#metodologia">Metodología</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#evidencias">Evidencias</a>
+      <a href="#ia">IA y ética</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <a class="btn top" href="assets/docs/ANEXO_3_Postulacion_BPD_UAN_2026.pdf" target="_blank" rel="noopener">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Descargar postulación
+    </a>
+    <button class="hamb" id="hamb" aria-label="Abrir menú">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow">
+        VI Concurso Nacional de BPD-UAN 2026 · Metodologías Activas Potenciadas por IA
+      </div>
+      <h1>Aprendizaje basado en proyectos e <strong>IA generativa</strong></h1>
+      <div class="pill-title">Diagnóstico, simulación y modernización de un banco didáctico electroneumático</div>
+      <div class="meta-list">
+        <span>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM4 20a8 8 0 0 1 16 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <b>Autor:</b> Francisco M. Fernández Periche PhD
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M3 21h18M5 21V9l7-4 7 4v12M9 21v-6h6v6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <b>Programa:</b> Ingeniería Electrónica · FIMEB
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2 4 6v6c0 5 3.4 8.5 8 10 4.6-1.5 8-5 8-10V6l-8-4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          <b>Sede:</b> Neiva Buganviles
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M7 3v3M17 3v3M4 9h16M6 5h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <b>Periodo:</b> 1,5 meses · Unidades 2, 3 y 4
+        </span>
+      </div>
+      <div class="hero-actions">
+        <a class="btn" href="#evidencias">Ver evidencias</a>
+        <a class="btn secondary" href="#resultados">Explorar resultados</a>
+      </div>
+    </div>
+
+    <div class="hero-card hero-slide hero-cover-clean">
+      <a href="assets/img/hero-bienvenida.jpg" data-image="assets/img/hero-bienvenida.jpg" data-title="Bienvenidos a esta experiencia de innovación docente">
+        <img src="assets/img/hero-bienvenida.jpg" alt="Bienvenidos a esta experiencia de innovación docente">
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="metrics-shell" aria-label="Indicadores principales">
+  <div class="metrics">
+    <div class="metric">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M16 11a4 4 0 1 0-8 0M5 20a7 7 0 0 1 14 0M19 8a3 3 0 0 1 0 6M5 8a3 3 0 0 0 0 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <div><strong>5</strong><span>equipos ejecutores</span></div>
+    </div>
+    <div class="metric green">
+      <svg viewBox="0 0 24 24" fill="none"><path d="m3 8 9-4 9 4-9 4-9-4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M7 10v5c2 2 8 2 10 0v-5M21 9v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <div><strong>11</strong><span>estudiantes</span></div>
+    </div>
+    <div class="metric">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M9 5h6M9 3h6v4H9V3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M7 5H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1M8 12h8M8 16h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <div><strong>3</strong><span>actividades evaluadas</span></div>
+    </div>
+    <div class="metric green">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 2 9.5 4 6.2 4.3 5 7.4 2.5 9.5 3.4 12.7 2.5 16 5 18.1 6.2 21.2l3.3.3L12 23l2.5-1.5 3.3-.3 1.2-3.1 2.5-2.1-.9-3.3.9-3.2L19 7.4l-1.2-3.1-3.3-.3L12 2Z" stroke="currentColor" stroke-width="1.7"/><path d="m8.5 12 2.2 2.2 4.8-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <div><strong>4,05 / 5,0</strong><span>promedio final</span></div>
+    </div>
+    <div class="metric">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 6v6l4 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <div><strong>6</strong><span>semanas académicas</span></div>
+    </div>
+  </div>
+</div>
+
+<main id="contenido">
+  <section class="section container" id="proyecto">
+    <div class="section-title">
+      <div>
+        <div class="kicker">Identificación de la práctica</div>
+        <h2>Un recurso inactivo convertido en laboratorio vivo de aprendizaje</h2>
+      </div>
+      <p>La práctica parte de un banco electroneumático fuera de servicio y lo transforma en un reto de diagnóstico, simulación, comunicación técnica y modernización con enfoque de Industria 4.0.</p>
+    </div>
+    <div class="split project-split">
+      <div class="panel visual-panel project-visual">
+        <a class="media-photo project-photo" href="assets/img/banco-real.jpg" data-image="assets/img/banco-real.jpg" data-title="Banco didáctico electroneumático real">
+          <img src="assets/img/banco-real.jpg" alt="Banco didáctico electroneumático real utilizado como objeto de estudio">
+        </a>
+      </div>
+
+      <div class="project-copy">
+        <div class="panel text-block">
+          <p>La situación retadora surge en las Unidades 2, 3 y 4 de la asignatura Autómatas Programables para la Industria 4.0, al identificar un banco didáctico electroneumático fuera de servicio sin aprovechamiento académico.</p>
+          <p>El reto no se limita a recuperar un equipo: busca que los estudiantes interpreten un sistema automatizado real, relacionen sensores, actuadores, PLC, neumática, seguridad, simulación y propuestas de modernización industrial.</p>
+          <p>La IA generativa se utilizó como apoyo para la guía formal, el despiece visual del banco, la organización de ideas, la revisión de coherencia y la sistematización de resultados, siempre con validación docente.</p>
+          <div class="tags">
+            <span class="tag">ABP</span>
+            <span class="tag">PLC</span>
+            <span class="tag">CADe_SIMU</span>
+            <span class="tag">Lógica Ladder</span>
+            <span class="tag">IoT / IIoT</span>
+            <span class="tag">Gemelo digital</span>
+            <span class="tag">Ética IA</span>
+          </div>
+        </div>
+
+        <div class="panel objective-panel">
+          <div class="kicker">Objetivo general</div>
+          <h3>Diagnosticar, simular y modernizar</h3>
+          <p>Implementar una Práctica Docente basada en Aprendizaje por Proyectos, apoyada por inteligencia artificial generativa, para que estudiantes de Ingeniería Electrónica diagnostiquen, simulen y propongan la modernización del banco didáctico electroneumático.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container compact">
+    <div class="process-grid">
+      <article class="card" data-title="Situación retadora" data-body="Banco didáctico electroneumático fuera de servicio, convertido en oportunidad pedagógica para interpretar sistemas automatizados y proponer recuperación o modernización.">
+        <div class="card-number">01</div>
+        <h3>Situación retadora</h3>
+        <div class="mini-visual bank"></div>
+        <p>Un equipo inactivo se convierte en caso real de diagnóstico y aprendizaje.</p>
+        <a class="more" href="#">Ver más →</a>
+      </article>
+      <article class="card" data-title="Diseño de la actividad" data-body="Se orienta la interpretación técnica del banco mediante identificación de componentes, entradas, salidas, sensores, actuadores, neumática, lógica de control y seguridad.">
+        <div class="card-number">02</div>
+        <h3>Diseño de la actividad</h3>
+        <div class="mini-visual diagram"></div>
+        <p>Guía formal, despiece visual, preguntas orientadoras, entregables y rúbrica.</p>
+        <a class="more" href="#">Ver más →</a>
+      </article>
+      <article class="card" data-title="Implementación por equipos" data-body="Cinco equipos desarrollaron diagnósticos, reconstrucción funcional, simulación en CADe_SIMU, lógica Ladder, diagnóstico de fallas, modernización, IoT o gemelo digital didáctico.">
+        <div class="card-number">03</div>
+        <h3>Implementación por equipos</h3>
+        <div class="mini-visual bank"></div>
+        <p>5 equipos, 11 estudiantes y productos técnicos diferenciados.</p>
+        <a class="more" href="#">Ver más →</a>
+      </article>
+      <article class="card" data-title="Evidencias y resultados" data-body="Informes técnicos, proyectos, simulaciones, videos MP4 de sustentación, observaciones cualitativas y tabla de notas ACT-1, ACT-2, ACT-3.">
+        <div class="card-number">04</div>
+        <h3>Evidencias y resultados</h3>
+        <div class="mini-visual ladder"></div>
+        <p>Repositorio Drive con teóricos, proyectos y videos.</p>
+        <a class="more" href="#">Ver más →</a>
+      </article>
+      <article class="card" data-title="Aporte de la IA" data-body="La IA apoyó redacción técnica, organización de ideas, visualización, revisión de coherencia, estructuración de presentaciones y sistematización docente de resultados.">
+        <div class="card-number">05</div>
+        <h3>Aporte de la IA</h3>
+        <div class="mini-visual ia"></div>
+        <p>Apoyo visual, documental y comunicativo, sin sustituir el criterio humano.</p>
+        <a class="more" href="#">Ver más →</a>
+      </article>
+      <article class="card" data-title="Impacto evaluado" data-body="Los promedios fueron ACT-1 = 4,27; ACT-2 = 4,33; ACT-3 = 3,51; promedio final = 4,05/5,0.">
+        <div class="card-number">06</div>
+        <h3>Impacto evaluado</h3>
+        <div class="mini-visual chart"></div>
+        <p>Resultados medibles y retroalimentación cualitativa por equipo.</p>
+        <a class="more" href="#">Ver más →</a>
+      </article>
+      <article class="card" data-title="Valor institucional" data-body="Práctica replicable en otras asignaturas y contextos con bancos, módulos o plantas didácticas subutilizadas, obsoletas o no operativas.">
+        <div class="card-number">07</div>
+        <h3>Valor institucional</h3>
+        <div class="mini-visual inst"></div>
+        <p>Metodología replicable para formación en Industria 4.0.</p>
+        <a class="more" href="#">Ver más →</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section container" id="metodologia">
+    <div class="section-title">
+      <div>
+        <div class="kicker">Metodología</div>
+        <h2>Ruta de cinco fases con despiece visual</h2>
+      </div>
+      <p>El hilo conductor pedagógico fue: diagnóstico del banco, interpretación funcional, simulación o modelado, propuesta de modernización y comunicación técnica.</p>
+    </div>
+    <div class="method-layout">
+      <div class="timeline">
+        <div class="phase">
+          <h3>Observación</h3>
+          <p>Análisis del banco real y del despiece visual para reconocer componentes, panel, sensores, actuadores y cableado.</p>
+        </div>
+        <div class="phase">
+          <h3>Investigación</h3>
+          <p>Consulta de PLC, neumática, seguridad, Industria 4.0, HMI, SCADA, MQTT, IO-Link e IoT.</p>
+        </div>
+        <div class="phase">
+          <h3>Interpretación</h3>
+          <p>Identificación de entradas, salidas, secuencias, fallas probables, riesgos e hipótesis de funcionamiento.</p>
+        </div>
+        <div class="phase">
+          <h3>Diseño y simulación</h3>
+          <p>Modelado con CADe_SIMU, lógica Ladder, arquitectura IoT, HMI/SCADA o gemelo digital didáctico.</p>
+        </div>
+        <div class="phase">
+          <h3>Síntesis</h3>
+          <p>Informe técnico, video, sustentación, rúbrica y retroalimentación docente para comunicar resultados verificables.</p>
+        </div>
+      </div>
+      <figure class="figure-card method-figure">
+        <a href="assets/img/despiece-banco.jpg" data-image="assets/img/despiece-banco.jpg" data-title="Despiece del banco didáctico electroneumático">
+          <img src="assets/img/despiece-banco.jpg" alt="Despiece del banco didáctico electroneumático con identificación de componentes">
+        </a>
+        <figcaption><strong>Despiece del banco didáctico electroneumático</strong><span>Identificación de PLC, botonera, FRL, electroválvulas, mangueras, fuente, cilindros, sensores y panel estructural.</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section container" id="resultados">
+    <div class="section-title">
+      <div>
+        <div class="kicker">Evaluación y resultados</div>
+        <h2>Resultados reales por actividad y por equipo</h2>
+      </div>
+      <p>La evaluación integró mediciones cuantitativas, observaciones cualitativas y revisión de productos técnicos.</p>
+    </div>
+    <div class="eval-grid">
+      <div class="panel">
+        <h3 style="margin-top:0;color:var(--navy)">Promedios de actividades</h3>
+        <div class="bars" aria-label="Promedios por actividad">
+          <div class="bar-row"><span>ACT-1</span><div class="bar-track"><div class="bar-fill" style="width:85.4%"></div></div><span>4,27</span></div>
+          <div class="bar-row"><span>ACT-2</span><div class="bar-track"><div class="bar-fill" style="width:86.6%"></div></div><span>4,33</span></div>
+          <div class="bar-row"><span>ACT-3</span><div class="bar-track"><div class="bar-fill" style="width:70.2%"></div></div><span>3,51</span></div>
+          <div class="bar-row"><span>Final</span><div class="bar-track"><div class="bar-fill" style="width:81%"></div></div><span>4,05</span></div>
+        </div>
+        <div class="source-note">Escala de referencia: 5,0. ACT-3 fue más exigente por sustentación y calidad audiovisual.</div>
+      </div>
+      <div class="panel" style="overflow:auto">
+        <table class="team-table" aria-label="Síntesis de resultados por equipo">
+          <thead>
+            <tr><th>Equipo</th><th>Foco técnico</th><th>Aporte a la BPD</th><th>Resultado</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ángel - Poveda</td>
+              <td>Diagnóstico técnico e ingeniería inversa del banco.</td>
+              <td>Reconstrucción del funcionamiento original y potencial pedagógico para PLC y electroneumática.</td>
+              <td class="score">3,8</td>
+            </tr>
+            <tr>
+              <td>Botero - Buendía - Martínez</td>
+              <td>Diagnóstico técnico destacado y mapa funcional mejorado.</td>
+              <td>Trabajo más equilibrado en claridad visual, seguridad y trazabilidad entre evidencia física y propuesta funcional.</td>
+              <td class="score">4,5 <span class="badge">destacado</span></td>
+            </tr>
+            <tr>
+              <td>Román - Cañón</td>
+              <td>Reconstrucción virtual del proceso en CADe_SIMU.</td>
+              <td>Caso de simulación funcional, seguro y verificable antes de una intervención física.</td>
+              <td class="score">4,0</td>
+            </tr>
+            <tr>
+              <td>Kewin - Nicolás</td>
+              <td>Rediseño del banco para prácticas modernas de PLC.</td>
+              <td>Proyección hacia una plataforma vigente con HMI, SCADA, IIoT y conectividad.</td>
+              <td class="score">4,0</td>
+            </tr>
+            <tr>
+              <td>Albert - Mariana</td>
+              <td>Gemelo digital didáctico y seguridad fail-safe.</td>
+              <td>Visión de simulación dinámica, depuración lógica, seguridad y preparación para monitoreo en la nube.</td>
+              <td class="score">3,7</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" id="evidencias">
+    <div class="section-title">
+      <div>
+        <div class="kicker">Evidencias visuales</div>
+        <h2>Galería inicial actualizada</h2>
+      </div>
+      <p>Se integraron las imágenes base del banco, el docente, la sede y la secuencia visual de presentación. Las evidencias gráficas específicas de resultados pueden añadirse después en esta misma galería o en fichas por equipo.</p>
+    </div>
+    <div class="gallery-grid gallery-large">
+      <figure class="figure-card">
+        <a href="assets/img/banco-real.jpg" data-image="assets/img/banco-real.jpg" data-title="Banco real">
+          <img src="assets/img/banco-real.jpg" alt="Banco real">
+        </a>
+        <figcaption><strong>Banco real</strong><span>Fotografía principal del banco didáctico electroneumático.</span></figcaption>
+      </figure>
+      <figure class="figure-card">
+        <a href="assets/img/despiece-banco.jpg" data-image="assets/img/despiece-banco.jpg" data-title="Despiece del banco">
+          <img src="assets/img/despiece-banco.jpg" alt="Despiece del banco">
+        </a>
+        <figcaption><strong>Despiece del banco</strong><span>Identificación visual de componentes y resumen funcional del sistema.</span></figcaption>
+      </figure>
+      <figure class="figure-card">
+        <a href="assets/img/slide-01-portada.jpg" data-image="assets/img/slide-01-portada.jpg" data-title="Portada del proyecto">
+          <img src="assets/img/slide-01-portada.jpg" alt="Portada del proyecto">
+        </a>
+        <figcaption><strong>Portada del proyecto</strong><span>Práctica Docente con IA, autor, periodo y métricas principales.</span></figcaption>
+      </figure>
+      <figure class="figure-card">
+        <a href="assets/img/slide-02-situacion.jpg" data-image="assets/img/slide-02-situacion.jpg" data-title="Situación retadora">
+          <img src="assets/img/slide-02-situacion.jpg" alt="Situación retadora">
+        </a>
+        <figcaption><strong>Situación retadora</strong><span>Del banco fuera de servicio al problema real de aprendizaje.</span></figcaption>
+      </figure>
+      <figure class="figure-card">
+        <a href="assets/img/slide-03-diseno.jpg" data-image="assets/img/slide-03-diseno.jpg" data-title="Diseño de la actividad">
+          <img src="assets/img/slide-03-diseno.jpg" alt="Diseño de la actividad">
+        </a>
+        <figcaption><strong>Diseño de la actividad</strong><span>Guía, despiece visual y metodología activa en cinco fases.</span></figcaption>
+      </figure>
+      <figure class="figure-card">
+        <a href="assets/img/slide-04-equipos.jpg" data-image="assets/img/slide-04-equipos.jpg" data-title="Implementación por equipos">
+          <img src="assets/img/slide-04-equipos.jpg" alt="Implementación por equipos">
+        </a>
+        <figcaption><strong>Implementación por equipos</strong><span>Cinco rutas de trabajo: diagnóstico, mapa funcional, simulación, rediseño y gemelo digital.</span></figcaption>
+      </figure>
+      <figure class="figure-card">
+        <a href="assets/img/slide-05-evidencias.jpg" data-image="assets/img/slide-05-evidencias.jpg" data-title="Evidencias y resultados">
+          <img src="assets/img/slide-05-evidencias.jpg" alt="Evidencias y resultados">
+        </a>
+        <figcaption><strong>Evidencias y resultados</strong><span>Programa Ladder, arquitectura renovada y simulación dinámica del proceso.</span></figcaption>
+      </figure>
+      <figure class="figure-card">
+        <a href="assets/img/slide-06-ia.jpg" data-image="assets/img/slide-06-ia.jpg" data-title="Aporte de la IA">
+          <img src="assets/img/slide-06-ia.jpg" alt="Aporte de la IA">
+        </a>
+        <figcaption><strong>Aporte de la IA</strong><span>Visualización, sistematización, comunicación académica, ética y validación.</span></figcaption>
+      </figure>
+      <figure class="figure-card">
+        <a href="assets/img/slide-07-impacto.jpg" data-image="assets/img/slide-07-impacto.jpg" data-title="Impacto evaluado">
+          <img src="assets/img/slide-07-impacto.jpg" alt="Impacto evaluado">
+        </a>
+        <figcaption><strong>Impacto evaluado</strong><span>Resultados medibles, fortalezas identificadas y evolución del desempeño.</span></figcaption>
+      </figure>
+      <figure class="figure-card">
+        <a href="assets/img/slide-08-valor.jpg" data-image="assets/img/slide-08-valor.jpg" data-title="Valor institucional">
+          <img src="assets/img/slide-08-valor.jpg" alt="Valor institucional">
+        </a>
+        <figcaption><strong>Valor institucional</strong><span>Recuperar, modernizar y documentar como práctica replicable.</span></figcaption>
+      </figure>
+      <figure class="figure-card">
+        <a href="assets/img/slide-09-reflexion.jpg" data-image="assets/img/slide-09-reflexion.jpg" data-title="Reflexión final">
+          <img src="assets/img/slide-09-reflexion.jpg" alt="Reflexión final">
+        </a>
+        <figcaption><strong>Reflexión final</strong><span>La IA fortalece el diseño, acompañamiento, evaluación y comunicación docente.</span></figcaption>
+      </figure>
+      <figure class="figure-card">
+        <a href="assets/img/sede-neiva.jpg" data-image="assets/img/sede-neiva.jpg" data-title="Sede Neiva">
+          <img src="assets/img/sede-neiva.jpg" alt="Sede Neiva">
+        </a>
+        <figcaption><strong>Sede Neiva</strong><span>Contexto territorial e institucional de la práctica.</span></figcaption>
+      </figure>
+      <figure class="figure-card">
+        <a href="assets/resumen_actividad.png" data-image="assets/resumen_actividad.png" data-title="Anexo visual de la actividad">
+          <img src="assets/resumen_actividad.png" alt="Anexo visual de la actividad">
+        </a>
+        <figcaption><strong>Anexo visual de la actividad</strong><span>Resumen visual original de la actividad incluido en el documento de postulación.</span></figcaption>
+      </figure>
+      <figure class="figure-card">
+        <a href="assets/resumen_resultados.png" data-image="assets/resumen_resultados.png" data-title="Anexo visual de resultados">
+          <img src="assets/resumen_resultados.png" alt="Anexo visual de resultados">
+        </a>
+        <figcaption><strong>Anexo visual de resultados</strong><span>Síntesis de entregas reales, productos desarrollados y resultados por equipo.</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section container" id="ia">
+    <div class="section-title">
+      <div>
+        <div class="kicker">IA generativa y ética</div>
+        <h2>La IA como aliada del docente</h2>
+      </div>
+      <p>La IA fortaleció visualización, organización y comunicación, pero las decisiones técnicas exigieron observación, simulación, referentes y validación docente.</p>
+    </div>
+    <div class="ally-grid">
+      <div class="ally">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z" stroke="currentColor" stroke-width="1.8"/><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" stroke="currentColor" stroke-width="1.8"/></svg>
+        <h3>Visualización técnica</h3>
+        <p>Imagen de despiece, apoyos visuales, infografías y recursos de análisis.</p>
+      </div>
+      <div class="ally">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M9 5h6M9 3h6v4H9V3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M7 5H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1M8 12l2 2 4-4M8 17h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Sistematización</h3>
+        <p>Guías, líneas de trabajo, rúbricas, resultados y observaciones por equipo.</p>
+      </div>
+      <div class="ally">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16v11H8l-4 4V5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8 9h8M8 13h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <h3>Comunicación académica</h3>
+        <p>Mejora de informes, presentaciones, videos y socialización de resultados.</p>
+      </div>
+      <div class="ally">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 3 20 6v6c0 5-3.4 8.5-8 9-4.6-.5-8-4-8-9V6l8-3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.5 12 2.2 2.2 4.8-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <h3>Validación ética</h3>
+        <p>No se aceptaron respuestas genéricas: toda afirmación debía ser verificable y coherente.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="docente-band">
+      <img src="assets/img/docente-francisco.jpg" alt="Fotografía del docente autor de la práctica">
+      <div>
+        <div class="kicker">Autor de la práctica</div>
+        <h2>Ing. Francisco M. Fernández Periche PhD</h2>
+        <p>La propuesta conserva un enfoque humano: la IA acompaña la visualización, organización y comunicación, mientras la decisión pedagógica y la validación técnica siguen siendo responsabilidad docente.</p>
+      </div>
+      <a class="btn secondary" href="#contacto">Ver contacto</a>
+    </div>
+  </section>
+
+  <section class="section container">
+    <blockquote class="quote">La IA no reemplaza al docente; fortalece su capacidad para diseñar, acompañar, evaluar y comunicar <strong>experiencias de aprendizaje más significativas, verificables e innovadoras.</strong></blockquote>
+  </section>
+
+  <section class="section container" id="recursos">
+    <div class="section-title">
+      <div>
+        <div class="kicker">Recursos y divulgación</div>
+        <h2>Materiales listos para conectar</h2>
+      </div>
+      <p>El sitio queda preparado para la postulación, repositorio, video del evento y carpeta de evidencias.</p>
+    </div>
+    <div class="resources">
+      <div class="resource">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M6 2h9l5 5v15H6V2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 2v6h6M9 13h6M9 17h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <h3>Postulación PDF</h3>
+        <p>Documento convertido a PDF para descarga directa desde el micrositio.</p>
+        <a href="assets/docs/ANEXO_3_Postulacion_BPD_UAN_2026.pdf" target="_blank" rel="noopener">Descargar PDF →</a>
+      </div>
+      <div class="resource">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h7l2 2h7v10a2 2 0 0 1-2 2H4V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        <h3>Repositorio Drive</h3>
+        <p>Carpeta con Actividad 01 Teóricos, Actividad 02 Proyectos y Actividad 03 Videos.</p>
+        <a href="https://drive.google.com/drive/folders/1xwKo6QumyrQxji0odszsqPLzJw9MTAo7" target="_blank" rel="noopener">Abrir Drive →</a>
+      </div>
+      <div class="resource">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16v14H4V5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m10 9 5 3-5 3V9Z" fill="currentColor"/></svg>
+        <h3>Evento FIMEB</h3>
+        <p>Presentación en la celebración de 50 años UAN: Usos de la IA en las Aulas de Ingeniería.</p>
+        <a href="https://www.youtube.com/watch?v=VK2chqdrgP8" target="_blank" rel="noopener">Ver video →</a>
+      </div>
+      <div class="resource">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2 4 6v6c0 5 3.4 8.5 8 10 4.6-1.5 8-5 8-10V6l-8-4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8 12h8M8 16h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <h3>Replicabilidad</h3>
+        <p>Adaptable a Automatización, Control, Microcontroladores, Instrumentación y Mantenimiento.</p>
+        <a href="#contacto">Solicitar adaptación →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contacto">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="brand-mark">UAN</div>
+      <small>UNIVERSIDAD<br>ANTONIO NARIÑO</small>
+    </div>
+    <div>
+      <h4>Sede Neiva Buganviles</h4>
+      <p>Calle 10 No. 6 – 40<br>Neiva, Huila, Colombia</p>
+    </div>
+    <div>
+      <h4>Programa</h4>
+      <p>FIMEB · Ingeniería Electrónica<br>Autómatas Programables para la Industria 4.0</p>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <p>Francisco M. Fernández Periche PhD<br>francisco.periche@una.edu.co<br>+57 312 204 4127</p>
+    </div>
+    <div>
+      <h4>Enlaces</h4>
+      <p><a href="https://sites.google.com/uan.edu.co/uso-de-inteligencia-artificial/home" target="_blank" rel="noopener">Programa del evento</a><br><a href="assets/docs/ANEXO_3_Postulacion_BPD_UAN_2026.docx">Postulación DOCX</a></p>
+    </div>
+  </div>
+</footer>
+
+<div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="modal-card">
+    <div class="modal-head">
+      <h3 id="modalTitle">Detalle</h3>
+      <button class="modal-close" id="modalClose" aria-label="Cerrar">×</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+  const hamb = document.getElementById('hamb');
+  const nav = document.getElementById('nav');
+  hamb.addEventListener('click', () => nav.classList.toggle('open'));
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+
+  const modal = document.getElementById('modal');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalBody = document.getElementById('modalBody');
+  const modalClose = document.getElementById('modalClose');
+
+  function openModal(title, html){
+    modalTitle.textContent = title;
+    modalBody.innerHTML = html;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+    modalClose.focus();
+  }
+  function closeModal(){
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden','true');
+    modalBody.innerHTML = '';
+  }
+  modalClose.addEventListener('click', closeModal);
+  modal.addEventListener('click', e => { if(e.target === modal) closeModal(); });
+  document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
+
+  document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', e => {
+      e.preventDefault();
+      const title = card.dataset.title || card.querySelector('h3')?.textContent || 'Detalle';
+      const body = card.dataset.body || card.querySelector('p')?.textContent || '';
+      openModal(title, `<p>${body}</p>`);
+    });
+  });
+
+  document.querySelectorAll('[data-image]').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const title = link.dataset.title || 'Imagen';
+      const src = link.dataset.image;
+      openModal(title, `<img src="${src}" alt="${title}">`);
+    });
+  });
+
+  const links = [...document.querySelectorAll('.nav a')];
+  const sections = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        links.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.nav a[href="#${entry.target.id}"]`);
+        if(active) active.classList.add('active');
+      }
+    });
+  }, {rootMargin:'-40% 0px -55% 0px', threshold:0});
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
