@@ -1,0 +1,303 @@
+{
+  "modules": [
+    {
+      "id": 1,
+      "semana": "Semana 1",
+      "categoria": "Fundamentos de Redes de Datos e IoT",
+      "titulo": "Redes de Datos, IoT e IIoT",
+      "descripcion": "Comprender la relación entre dispositivos, datos, redes y aplicaciones conectadas.",
+      "resultado": "Mapa conceptual de una aplicación IoT con sus componentes principales.",
+      "entrega": "Problema, variable a monitorear y diagrama inicial de arquitectura.",
+      "palabras": [
+        "redes",
+        "IoT",
+        "IIoT",
+        "sensores",
+        "arquitectura"
+      ],
+      "ppt": "01_Introduccion_Redes_IoT_IIoT_REVISADA.pptx",
+      "imagen": "assets/img/actividad_01.jpg",
+      "color": "azul"
+    },
+    {
+      "id": 2,
+      "semana": "Semana 1",
+      "categoria": "Fundamentos de Redes de Datos e IoT",
+      "titulo": "Modelo TCP/IP y Direccionamiento IP",
+      "descripcion": "Interpretar capas TCP/IP, dirección IP, máscara, gateway, DNS, DHCP, puertos y pruebas de conectividad.",
+      "resultado": "Taller corto de direccionamiento y diagnóstico básico.",
+      "entrega": "Tabla de parámetros de red y evidencia de conectividad.",
+      "palabras": [
+        "TCP/IP",
+        "IP",
+        "DNS",
+        "gateway",
+        "puertos"
+      ],
+      "ppt": "02_Modelo_TCPIP_Direccionamiento_REVISADA.pptx",
+      "imagen": "assets/img/actividad_02.jpg",
+      "color": "morado"
+    },
+    {
+      "id": 3,
+      "semana": "Semana 2",
+      "categoria": "Protocolos y Comunicación de Datos",
+      "titulo": "Protocolos IoT: HTTP, MQTT y WebSocket",
+      "descripcion": "Comparar protocolos de comunicación y seleccionar el más apropiado según latencia, tráfico y escalabilidad.",
+      "resultado": "Tabla comparativa de protocolos aplicada a un escenario IoT.",
+      "entrega": "Protocolo seleccionado y justificación técnica breve.",
+      "palabras": [
+        "HTTP",
+        "MQTT",
+        "WebSocket",
+        "protocolos",
+        "latencia"
+      ],
+      "ppt": "03_Protocolos_IoT_HTTP_MQTT_WebSocket_REVISADA.pptx",
+      "imagen": "assets/img/actividad_03.jpg",
+      "color": "cyan"
+    },
+    {
+      "id": 4,
+      "semana": "Semana 2",
+      "categoria": "Protocolos y Comunicación de Datos",
+      "titulo": "MQTT y Arquitectura Publicador-Suscriptor",
+      "descripcion": "Profundizar en broker, publisher, subscriber, tópicos, payload, QoS, retained message y LWT.",
+      "resultado": "Diseño de tópicos MQTT para el proyecto integrador.",
+      "entrega": "Topic tree y payload JSON de prueba.",
+      "palabras": [
+        "broker",
+        "publisher",
+        "subscriber",
+        "topic",
+        "QoS",
+        "LWT"
+      ],
+      "ppt": "04_MQTT_Publicador_Suscriptor_REVISADA.pptx",
+      "imagen": "assets/img/actividad_04.jpg",
+      "color": "verde"
+    },
+    {
+      "id": 5,
+      "semana": "Semana 3",
+      "categoria": "Plataformas, Visualización y Seguridad",
+      "titulo": "Plataformas IoT y Flujo de Datos",
+      "descripcion": "Integrar adquisición, procesamiento, almacenamiento y visualización en una solución IoT.",
+      "resultado": "Diagrama sensor-dashboard para el proyecto integrador.",
+      "entrega": "Diagrama de flujo con plataforma y servicios seleccionados.",
+      "palabras": [
+        "Node-RED",
+        "Grafana",
+        "ThingsBoard",
+        "Blynk",
+        "Ubidots",
+        "dashboard"
+      ],
+      "ppt": "05_Plataformas_IoT_Flujo_Datos_REVISADA.pptx",
+      "imagen": "assets/img/actividad_05.jpg",
+      "color": "naranja"
+    },
+    {
+      "id": 6,
+      "semana": "Semana 3",
+      "categoria": "Plataformas, Visualización y Seguridad",
+      "titulo": "Dashboards, Calidad de Datos y Seguridad en IoT",
+      "descripcion": "Diseñar dashboards útiles, evaluar calidad del dato y aplicar controles mínimos de seguridad.",
+      "resultado": "Lista de riesgos, controles y criterios de calidad para el proyecto.",
+      "entrega": "Matriz simple de calidad de datos y seguridad.",
+      "palabras": [
+        "calidad",
+        "seguridad",
+        "timestamp",
+        "TLS",
+        "alertas"
+      ],
+      "ppt": "06_Dashboards_Calidad_Datos_Seguridad_REVISADA.pptx",
+      "imagen": "assets/img/actividad_06.jpg",
+      "color": "rojo"
+    },
+    {
+      "id": 7,
+      "semana": "Semana 4",
+      "categoria": "Proyecto Integrador IoT",
+      "titulo": "Diseño Técnico de una Aplicación IoT",
+      "descripcion": "Definir problema, variables, sensores, comunicación, plataforma, alcance y evidencias del prototipo.",
+      "resultado": "Ficha técnica del proyecto integrador.",
+      "entrega": "Ficha técnica validada antes de la implementación final.",
+      "palabras": [
+        "problema",
+        "sensor",
+        "requerimientos",
+        "ficha técnica",
+        "prototipo"
+      ],
+      "ppt": "07_Diseno_Aplicacion_IoT_REVISADA.pptx",
+      "imagen": "assets/img/actividad_07.jpg",
+      "color": "indigo"
+    },
+    {
+      "id": 8,
+      "semana": "Semana 4",
+      "categoria": "Proyecto Integrador IoT",
+      "titulo": "Validación, Documentación y Sustentación de Proyectos IoT",
+      "descripcion": "Preparar evaluación final mediante pruebas, evidencias, informe técnico y sustentación organizada.",
+      "resultado": "Lista de chequeo de validación y preparación de sustentación.",
+      "entrega": "Lista de chequeo completa y presentación final del proyecto.",
+      "palabras": [
+        "validación",
+        "documentación",
+        "sustentación",
+        "evidencias",
+        "pruebas"
+      ],
+      "ppt": "08_Validacion_Documentacion_Sustentacion_REVISADA.pptx",
+      "imagen": "assets/img/actividad_08.jpg",
+      "color": "gris"
+    }
+  ],
+  "resources": [
+    {
+      "tipo": "Libro abierto",
+      "titulo": "An Introduction to Computer Networks",
+      "desc": "Texto abierto para reforzar LAN, internetworking, transporte y TCP/IP.",
+      "url": "https://intronetworks.cs.luc.edu/",
+      "tags": [
+        "Redes",
+        "TCP/IP"
+      ]
+    },
+    {
+      "tipo": "Libro abierto",
+      "titulo": "Computer Networks: A Systems Approach",
+      "desc": "Enfoque sistémico para comprender protocolos y arquitectura de redes.",
+      "url": "https://github.com/SystemsApproach/book",
+      "tags": [
+        "Redes",
+        "Protocolos"
+      ]
+    },
+    {
+      "tipo": "Guía",
+      "titulo": "Internet Society: IoT Overview",
+      "desc": "Panorama conceptual sobre oportunidades, riesgos y desafíos del Internet de las Cosas.",
+      "url": "https://www.internetsociety.org/resources/doc/2015/iot-overview/",
+      "tags": [
+        "IoT",
+        "Contexto"
+      ]
+    },
+    {
+      "tipo": "Estándar",
+      "titulo": "MQTT.org",
+      "desc": "Portal de referencia sobre MQTT como protocolo ligero de mensajería IoT.",
+      "url": "https://mqtt.org/",
+      "tags": [
+        "MQTT",
+        "IoT"
+      ]
+    },
+    {
+      "tipo": "Especificación",
+      "titulo": "OASIS MQTT 5.0",
+      "desc": "Especificación técnica para QoS, retained messages, will messages y formato de paquetes.",
+      "url": "https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html",
+      "tags": [
+        "MQTT",
+        "Especificación"
+      ]
+    },
+    {
+      "tipo": "Documentación",
+      "titulo": "Node-RED Docs",
+      "desc": "Documentación oficial para crear flujos, integrar servicios y desplegar automatizaciones.",
+      "url": "https://nodered.org/docs/",
+      "tags": [
+        "Node-RED",
+        "Flujos"
+      ]
+    },
+    {
+      "tipo": "Cookbook",
+      "titulo": "Node-RED MQTT Recipes",
+      "desc": "Recetas para conectar broker, publicar, suscribirse y trabajar con mensajes MQTT.",
+      "url": "https://cookbook.nodered.org/mqtt/",
+      "tags": [
+        "Node-RED",
+        "MQTT"
+      ]
+    },
+    {
+      "tipo": "Documentación",
+      "titulo": "Grafana: Time series",
+      "desc": "Guía para visualización de series temporales con timestamp, rangos y paneles.",
+      "url": "https://grafana.com/docs/grafana/latest/visualizations/panels-visualizations/visualizations/time-series/",
+      "tags": [
+        "Dashboard",
+        "Datos"
+      ]
+    },
+    {
+      "tipo": "Documentación",
+      "titulo": "ThingsBoard Docs",
+      "desc": "Plataforma IoT para dispositivos, telemetría, dashboards y reglas.",
+      "url": "https://thingsboard.io/docs/",
+      "tags": [
+        "Plataforma",
+        "IoT"
+      ]
+    },
+    {
+      "tipo": "Documentación",
+      "titulo": "Blynk Docs",
+      "desc": "Plataforma IoT para prototipos, gestión de dispositivos y dashboards web/móvil.",
+      "url": "https://docs.blynk.io/",
+      "tags": [
+        "Blynk",
+        "Prototipos"
+      ]
+    },
+    {
+      "tipo": "Documentación",
+      "titulo": "Ubidots Developer Hub",
+      "desc": "Recursos para conectar dispositivos, crear variables, dashboards y aplicaciones IoT.",
+      "url": "https://ubidots.com/docs/",
+      "tags": [
+        "Ubidots",
+        "IoT"
+      ]
+    },
+    {
+      "tipo": "Librería",
+      "titulo": "Arduino PubSubClient",
+      "desc": "Librería para enviar y recibir mensajes MQTT desde placas compatibles con Arduino.",
+      "url": "https://docs.arduino.cc/libraries/pubsubclient/",
+      "tags": [
+        "ESP32",
+        "MQTT"
+      ]
+    }
+  ],
+  "videos": [
+    {
+      "titulo": "Crear un dashboard MQTT con Node-RED",
+      "desc": "Tutorial práctico para visualizar datos de sensores mediante MQTT y Node-RED.",
+      "url": "https://www.youtube.com/watch?v=Gu0Vq2kVNzw",
+      "embed": "https://www.youtube-nocookie.com/embed/Gu0Vq2kVNzw",
+      "modulo": "Actividad 5"
+    },
+    {
+      "titulo": "MQTT en Node-RED: bases, ejemplos y consejos",
+      "desc": "Guía para conectar un broker, publicar y suscribirse desde flujos Node-RED.",
+      "url": "https://www.youtube.com/watch?v=fkrbcnp8wpI",
+      "embed": "https://www.youtube-nocookie.com/embed/fkrbcnp8wpI",
+      "modulo": "Actividad 4"
+    },
+    {
+      "titulo": "Panel Time Series en Grafana",
+      "desc": "Video útil para discutir visualización histórica y tendencias en dashboards.",
+      "url": "https://www.youtube.com/watch?v=YpOazX67GSo",
+      "embed": "https://www.youtube-nocookie.com/embed/YpOazX67GSo",
+      "modulo": "Actividad 6"
+    }
+  ]
+}

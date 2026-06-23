@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 360">
+<defs>
+<linearGradient id="a" x1="0" x2="1"><stop stop-color="#06b6d4"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
+</defs>
+<rect width="1100" height="360" rx="28" fill="#0f172a"/>
+<g font-family="Inter, Arial" font-size="18" fill="#e2e8f0" text-anchor="middle">
+<g>
+<rect x="55" y="110" width="150" height="100" rx="22" fill="#172554" stroke="#38bdf8"/>
+<text x="130" y="150" font-weight="800">Sensor</text><text x="130" y="180" font-size="14">variable física</text>
+</g>
+<g><rect x="270" y="110" width="150" height="100" rx="22" fill="#1e1b4b" stroke="#a78bfa"/><text x="345" y="150" font-weight="800">Nodo</text><text x="345" y="180" font-size="14">ESP32 / WiFi</text></g>
+<g><rect x="485" y="110" width="150" height="100" rx="22" fill="#042f2e" stroke="#2dd4bf"/><text x="560" y="150" font-weight="800">MQTT</text><text x="560" y="180" font-size="14">broker + topics</text></g>
+<g><rect x="700" y="110" width="150" height="100" rx="22" fill="#431407" stroke="#fb923c"/><text x="775" y="150" font-weight="800">Plataforma</text><text x="775" y="180" font-size="14">Node-RED / BD</text></g>
+<g><rect x="915" y="110" width="150" height="100" rx="22" fill="#052e16" stroke="#4ade80"/><text x="990" y="150" font-weight="800">Dashboard</text><text x="990" y="180" font-size="14">tendencias + alerta</text></g>
+</g>
+<g stroke="url(#a)" stroke-width="6" stroke-linecap="round">
+<path d="M210 160h55"/><path d="M425 160h55"/><path d="M640 160h55"/><path d="M855 160h55"/>
+</g>
+<text x="550" y="288" font-family="Inter, Arial" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">De la medición a una decisión técnica verificable</text>
+</svg>
